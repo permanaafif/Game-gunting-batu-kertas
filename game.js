@@ -5,13 +5,13 @@ const pilComp = document.getElementsByClassName('comp')[0];
 const hasil = document.getElementsByClassName('hasil')[0];
 
 function tanding(n){
-    let comp =parseInt(Math.random()*10);
+    let comp =parseInt(Math.random()*100);
     let hasilComp;
 
-    if (comp>7){
+    if (comp>66){
         hasilComp='Gunting';
         a = '&#9996';
-    } else if(comp>=4){
+    } else if(comp>=33){
         hasilComp='Batu';
         a = '&#9994';
     }else{
