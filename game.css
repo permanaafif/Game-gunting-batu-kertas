@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+section{
+    width: 60%;
+    height: 60vh;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: grid;
+    border: 1px solid snow; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr .5fr 1fr;
+    grid-template-areas: 
+        "comp comp comp"
+        "gunting batu kertas"
+        "hasil hasil hasil";
+    row-gap: 5px;
+    column-gap: 5px;
+    box-shadow: 10px 10px 5px rgba(52, 114, 206, 0.5);
+    overflow: hidden;
+}
+.comp,
+.gunting,
+.batu,
+.kertas,
+.hasil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    opacity: 0.9;
+}
+.gunting,
+.batu,
+.kertas,
+.comp{ font-size: 2rem;}
+
+.hasil{ 
+    font-size: 1.5rem;
+    color:aliceblue;
+}
+
+.comp{
+    grid-area: comp;
+    background-color: aqua;
+}
+.gunting{
+    grid-area: gunting;
+    background-color: rgb(79, 55, 219);
+    cursor: pointer;
+}
+.batu{
+    grid-area: batu;
+    background-color: rgb(44, 172, 112);
+    cursor: pointer;
+}
+.kertas{
+    grid-area: kertas;
+    background-color: rgb(206, 221, 68);
+    cursor: pointer;
+}
+.hasil{
+    grid-area: hasil;
+    background-color: salmon;
+}
+.batu:hover, .kertas:hover, .gunting:hover{
+    scale: 0.8;
+}
